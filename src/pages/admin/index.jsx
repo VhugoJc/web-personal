@@ -1,0 +1,1 @@
+export {default} from "./admin";//para que cuando se elija pages/admin se vaya directo a admin

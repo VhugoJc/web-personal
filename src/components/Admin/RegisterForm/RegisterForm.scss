@@ -1,0 +1,55 @@
+@import '../../../scss/index.scss';
+.select{
+    font-size: 0em + 20px/$defaultFontSize;
+}
+.register-form{
+    text-align: left;
+    padding: 20px 40px 20px 40px !important;
+
+  /*    CUANDO HAYA POLITICAS DE PRIV
+  
+        .ant-form-item{
+        &:nth-child(5),
+        &:last-of-type {
+            margin: 0;
+        }
+    }*/
+
+    Select{
+        font-size: 0em + 20px/$defaultFontSize;
+    }
+
+    &__input{
+        .ant-input-prefix{
+            i {
+                font-size: 0em + 22px / $defaultFontSize;
+            }
+        }
+        input{
+            font-size: 0em + 20px/$defaultFontSize;
+           &:focus{
+               border-color: $primary-color;
+               box-shadow: none;
+           }
+        }
+
+    }
+    &__button{
+        width: 100%;
+        font-size: 0em +22px / $defaultFontSize;
+        background-color: $primary-color;
+        color: $font-light;
+        height: 42px;
+
+        &:hover{
+            background-color: $primary-color-hover;
+            color: $font-light;
+        }
+
+        &:focus,
+        &:active{
+            background-color: $primary-color;
+            color: $font-light;
+        }
+    }
+}

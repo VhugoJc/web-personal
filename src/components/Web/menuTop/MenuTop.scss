@@ -1,0 +1,81 @@
+@import '../../../scss/index.scss';
+
+.menu-top-web{
+    position: sticky;
+    height: 60px;
+    top: 0;
+    background-color: $background-dark-web;
+    border: 0;
+    display: flex;
+    align-items: center;
+
+    li{
+        border: 0 !important;
+
+        a{
+            color: #fff !important;
+            font-weight: bold;
+
+     &:hover{
+                color: $primary-color !important;
+            }
+        }
+    }
+
+    &__logo{
+        padding: 10px;
+    
+        img{
+            width: 200px;
+            
+        }
+    }
+
+   
+}
+.social-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    
+
+    a{
+        
+        margin-right: 1;
+        border-radius: 5px;
+        display: flex;
+        margin-right: 10px;
+        padding: 5px 8px;
+        
+
+        .fb{
+            background-color: $facebook;
+            border: 5px solid $facebook;
+        }
+        .ig{
+            background-color: $instagram;
+            border: 5px solid $instagram;
+        }
+        .li{
+            background-color: $linkedin;
+            border: 5px solid $linkedin;
+        }
+        .tw{
+            background-color: $twitter;
+            border: 5px solid $twitter;
+        }
+        .yt{
+            background-color: $youtube;
+            border: 5px solid $youtube;
+        }
+        .sm{
+            
+            width: 20px;
+        height: 20px;
+            border-radius: 5px;;
+            
+        }
+    }
+} 
+

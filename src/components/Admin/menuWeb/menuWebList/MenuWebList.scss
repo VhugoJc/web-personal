@@ -1,0 +1,76 @@
+@import '../../../../scss/index.scss';
+.menu-web-list{
+    
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+    &__items{
+        background-color: #fff;
+        padding: 10px 20px;
+
+        .List{
+            position: relative;
+            .draggable{
+                width: 100%;
+                background-color: rgba(255,255,255,0.5);
+
+                &:hover{
+                    cursor: pointer;
+                }
+                &.dragged{
+                    touch-action: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 0 10px;
+                }
+            }
+
+        }
+        .ant-list-item-meta{
+            display: flex;
+            align-items: center;
+            
+            .sm{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                height: $socialm-height-admin;
+                width: $socialm-width-admin;
+            }
+            
+           
+            
+            .Youtube{
+                background-color:$youtube;
+                border: 5px solid $youtube;
+            }
+            .Facebook{
+                border: 8px solid $facebook;
+                background-color: $facebook;
+            }
+            .Instagram{
+                border: 4px solid $instagram;
+                background-color: $instagram;
+            }
+            .LinkedIn{
+                border: 8px solid $linkedin;
+                background-color: $linkedin;
+            }
+            .Twitter{
+                border: 8px solid $twitter;
+                background-color: $twitter;
+            }
+            
+        }
+        
+        Button{
+            margin-left: 5px;
+        }
+    }
+
+    
+}
+

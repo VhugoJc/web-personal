@@ -1,0 +1,45 @@
+@import '../../../scss/index.scss';
+
+.list-user{
+   flex: 1;
+    
+    
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &-switch{
+            display: flex;
+            align-items: center;
+        }
+        &-span{
+            margin-left: 20px;
+        }
+        >button{
+            background-color: $primary-color;
+            margin-right: 20px;
+            
+            &:hover{
+                background-color: $primary-color-hover;
+            }
+
+            &:focus,
+            &:active{
+                background-color: $primary-color;
+            }
+        }
+    }
+   
+}
+
+.user-active{
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.ant-list-item-meta{
+    display: flex;
+    align-items: center;
+}
