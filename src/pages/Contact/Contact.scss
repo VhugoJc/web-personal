@@ -1,0 +1,57 @@
+@import '../../scss/index.scss';
+
+.contact{
+        &-header{
+            width: 100%;
+            text-align: center ;
+            padding: 50px 50px 0 50px;
+            h1{
+                color: $font-light;
+            }
+        }
+        &-card{
+                margin-top: 20px;
+                margin-bottom: 40px;
+                padding-left: 200px;
+                padding-right: 200px;
+                @media (max-width:$media-breakpoint-up-xl){
+                    padding-left: 0;
+                    padding-right: 0;
+                }   
+        }
+
+        .map{
+            height: 450px;
+            @media (max-width: $media-breakpoint-down-md){
+                height:  300px;
+            }
+        }
+        
+        .contact-card__grid{
+            width:50%;//Izquierdo y derecho
+            border: 0;
+            border-color: transparent;
+            background-color: transparent;
+            @media (max-width: $media-breakpoint-down-md){//Se divide en superior e inferior
+                width:100%;
+            }
+
+            .ant-card{
+                background: transparent;
+                &-grid{
+                    box-shadow: none;
+                }
+            }
+            
+        }
+        .ant-card{
+            background: transparent;
+            &-grid{
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width:$media-breakpoint-down-lg){//Para que en movil se vea el alert
+            padding-top: 70px;
+        }
+}

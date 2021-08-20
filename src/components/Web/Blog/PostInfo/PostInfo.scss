@@ -1,0 +1,56 @@
+@import '../../../../scss/index.scss';
+
+.post-info{
+    
+    color: $font-light;   
+    margin-top: 50px;
+
+
+    &__title{
+        text-align: center; 
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 40px;
+        @media (max-width:$media-breakpoint-down-sm){
+         margin-top: 100px;
+        }
+    }
+
+    &__creation-date{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    h1,h2,h3,h4,h5{
+        color: $font-light;
+        
+    }
+    &__description{
+        color: $primary-color-dark;
+        font-size: 16px;
+        margin-bottom: 100px;
+    }
+
+    img{
+        margin-right: 20px ;
+        @media (max-width:$media-breakpoint-down-sm){
+            width: 100%;
+            height: 100%;    
+        }
+
+        
+    }
+
+    .icon{
+        width: auto;
+        height: 25px;
+        
+    }
+
+    .tecnology{
+        width: auto;
+        height: 40px;
+        
+    }
+
+}

@@ -26,7 +26,9 @@ const RegisterForm = ({setReloadUsers,setIsVisible}) => {
             name: "",
             lastName: "",
             role: "admin",
-            privacyPolicy: addUserFromAdmin
+            privacyPolicy: addUserFromAdmin,
+            job:"",
+            description:""
     });
 
     const [status, setStatus] = useState({//estado de error o ssuccess

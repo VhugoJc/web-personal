@@ -1,0 +1,34 @@
+@import '../../../../scss/index';
+
+.navigation-footer{
+
+    h3{
+        color: $font-light;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+
+ul{
+    padding: 5px;
+
+
+    li{
+   
+        list-style: none;
+        padding: 5px 0;
+
+        a,Link{
+            color: $primary-color-dark;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+
+        svg{
+            margin-right: 10px;
+        }
+    }
+}

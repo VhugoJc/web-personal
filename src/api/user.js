@@ -128,7 +128,17 @@ export function getUserActiveApi (token, status){
         return errorServer;
     })
 }
+export function getUsersDataApi(){
+    const url = `${basePath}/get-user-data?active=${true}`;
 
+    return fetch(url).then(response=>{
+        return response.json();
+    }).then(result=>{
+        return result
+    }).catch(err=>{
+        return err
+    })
+}
 export function uploadAvatarApi (token, avatar, userId){
     const url = `${basePath}/upload-avatar/${userId}`;
 

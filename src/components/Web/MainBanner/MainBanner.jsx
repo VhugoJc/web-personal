@@ -5,7 +5,7 @@ import Typed from 'react-typed';
 const MainBanner = () => {
 
     return (  
-        <div className="main-banner">
+        <div className="main-banner main-banner__home">
             <div className="main-banner__dark"/>
 
             <Row>
@@ -13,22 +13,23 @@ const MainBanner = () => {
                 <Col lg={16}>
                     <h2>
                     <Typed
+
                     strings={[
-                    'Desarrollamos sitios web',
-                    'Desarrollamos aplicaciones de escritorio',
-                    'Desarrollamos aplicaciones móviles',
-                    'Desarrollamos aplicaciones web',
-                    'Desarrollamos Tecnología.']}
-                    typeSpeed={35}
-                    backSpeed={35}
-                    loop
+                        'Reparamos Celulares',
+                        'Reparamos Computadoras',
+                        'Reparamos Tablets',
+                        'Reparamos Todo.'                        
+                ]}
+                    typeSpeed={36}
+                    backSpeed={40}
+                    loop                    
                 />
                     </h2>
                     <h3>
-                        Potencializamos tu negocio <br/>con la mejor tecnología.
+                        Buscamos darte la solución que necesitas.
                     </h3>
                 </Col>
-                <col lg={4}/>
+                <Col lg={4}/>
             </Row>
         </div>
     );

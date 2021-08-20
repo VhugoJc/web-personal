@@ -1,0 +1,36 @@
+@import '../../scss/index.scss';
+.pagination{
+    text-align: center;
+    
+
+    a{
+        border-radius: 10px;
+        border-color: $primary-color;
+    }
+    .ant-pagination-item{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: transparent;
+        border-color: transparent;
+        padding-left: 9px;
+        
+        &-active{
+            border-color: $primary-color;
+        }
+        &-link{
+            margin-top: -10px;
+            color: white;
+            padding-left: 15px;
+            border-color: transparent;
+            border-radius: 20px;
+            height: 40px;
+            background-color: $primary-color;
+    
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+    
+}

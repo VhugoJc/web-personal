@@ -1,0 +1,101 @@
+@import '../../../scss/index.scss';
+
+.img-gallery{
+    z-index: -12 !important;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90% !important;
+    margin-bottom: 100px;
+
+    @media (max-width: $media-breakpoint-down-sm) {
+      width: 100% !important;
+    }
+
+    .title{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: $primary-color-light;;
+      font-weight: bold;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    .container {
+        padding: 15px;
+      }
+      
+      ul.images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      ul.images > li {
+        position: relative;
+        padding-top: 66%;
+      }
+      
+      ul.images > li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      @media (max-width: $media-breakpoint-down-sm) {
+        ul.images {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+
+      .container {
+        padding: 10px;
+      }
+      
+      ul.images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+     
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      ul.images > li {
+        position: relative;
+        padding-top: 66%;
+      }
+      
+      ul.images > li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+      }
+      
+      @media (max-width: 567px) {
+        ul.images {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+      }
+      
+}
+.fullscreen-group{
+  &--expanded{//para que cuando se abre el fuullscreen no queden por encima los botones de socialmedia
+    z-index: 16;
+  }
+}

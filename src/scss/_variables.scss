@@ -2,6 +2,8 @@ $defaultFontSize: 16px;
 
 $primary-color: #0098d3;
 $primary-color-hover: #0280b3;
+$primary-color-light: #6ec1e4;
+$primary-color-dark: #8698a5;
 
 $menu-color: #252527;
 
@@ -13,7 +15,7 @@ $font-dark-light: #252527;
 $font-dark: #000;
 
 $border-light: #fff;
-$border-grey-light: #e8e8e8;
+$border-grey-light: #c0c0c0;
 $border-grey: #808080;
 $border-grey-dark: #595959;
 $border-dark-light: #252527;
@@ -32,6 +34,7 @@ $socialm-height-admin:40px;
 
 
 
+ $background-dark-light-web: #1a2734;
 $background-dark-web: #16202b;
 $background-light: #fff;
 $background-grey-light: #e8e8e8;
@@ -48,14 +51,14 @@ $error: #f00;
 //Responsive down size
 $media-breakpoint-down-xs: 413.98px;
 $media-breakpoint-down-sm: 573.98px;
-$media-breakpoint-down-md: 767.98px;
+$media-breakpoint-down-md: 734.98px;
 $media-breakpoint-down-lg: 991.98px;
 $media-breakpoint-down-xl: 1199.98px;
 
 //Responsive up size
 $media-breakpoint-up-xs: 320px;
 $media-breakpoint-up-sm: 576px;
-$media-breakpoint-up-md: 768px;
+$media-breakpoint-up-md: 735px;//iphone 6
 $media-breakpoint-up-lg: 992px;
 $media-breakpoint-up-xl: 1200px;
 

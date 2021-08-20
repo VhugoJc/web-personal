@@ -1,12 +1,35 @@
 @import '../../../scss/index.scss';
 .main-banner{
+    z-index: -3;
     height: 500px;
     position: relative;
-    background-image: url('../../../assets/imagenes/jpg/home-banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
+    &__home{
+        background-image: url('../../../assets/imagenes/jpg/home-banner2.jpg');
+    }
+    &__contact{
+        background-image: url('../../../assets/imagenes/png/contact-banner.png');
+    }
+    &__services{
+        background-image: url('../../../assets/imagenes/png/services-banner1.png');
+    }
+    &__services1{
+        background-image: url('../../../assets/imagenes/png/services-banner2.png');
+    }
+    &__services2{
+        background-image: url('../../../assets/imagenes/png/services-banner3.png');
+    }
+
+    &__about-us{
+        height: 800px;
+        background-image: url('../../../assets/imagenes/png/techfix-about-us-banner.png');
+        @media (max-width:$media-breakpoint-down-sm){
+            height: 500px;
+        }
+    }
     &__dark{
         position: absolute;
         top: 0;
@@ -23,8 +46,8 @@
         
 
         h2{
-            @media (max-width:$media-breakpoint-down-sm){//pantala normal
-                font-size: 35px;
+            @media (max-width:$media-breakpoint-down-sm){
+                font-size: 28px;
 
             }
            
@@ -37,7 +60,7 @@
         }
 
         h3{
-            @media (max-width: $media-breakpoint-up-xs){//pantala normal
+            @media (max-width: $media-breakpoint-up-xs){
                 font-size: 20px;
                
 

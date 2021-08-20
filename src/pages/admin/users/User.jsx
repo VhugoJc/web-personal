@@ -16,13 +16,13 @@ const User = () => {
         const getUsers= async ()=>{
             const result = await getUserActiveApi(token,true);
             if(result.message){//si el servidor encontró algún error
-                console.log(result.message);
+           
             }else{
                 setUsersActive(result.users);
             }
             const resultInactive = await getUserActiveApi(token,false);
             if(resultInactive.message){//si el servidor encontró algún error
-                console.log(resultInactive.message);
+                
             }else{
                 setUsersInactive(resultInactive.users);
             }

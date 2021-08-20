@@ -3,8 +3,10 @@
 .list-user{
    flex: 1;
     
+   
     
     &__header{
+        z-index: 1;
         display: flex;
         align-items: center;
         justify-content: space-between;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {getMenuApi} from '../../../api/Menu';
+import {addMenuApi, getMenuApi, updateMenuApi, deleteMenuApi} from '../../../api/Menu';
 import { useState } from 'react';
 import MenuWebList from '../../../components/Admin/menuWeb/menuWebList';
 import { getSocialMediaApi } from '../../../api/MenuSM';
@@ -22,7 +22,15 @@ const MenuWeb = () => {
     },[reloadMenuWeb]);
 
     return (  
-        <MenuWebList setReloadMenuWeb={setReloadMenuWeb} menu={menu} socialMedia={socialMedia}/>
+        <MenuWebList 
+            title={"Menú"}
+            setReloadMenuWeb={setReloadMenuWeb} 
+            menu={menu} 
+            socialMedia={socialMedia}
+            addMenuApi={addMenuApi}
+            updateMenuApi={updateMenuApi} 
+            deleteMenuApi = {deleteMenuApi}
+            />
     );
 }
  

@@ -1,0 +1,39 @@
+@import '../../../scss/index.scss';
+.affix{
+    position: absolute !important;
+    right: 20px !important;
+    z-index: 1;
+  }
+
+  .btnSM{
+     border: none;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    
+    &-icon{
+        margin-top: 20px;
+        height: 40px;
+        width:  40px;
+    }
+    
+    &-bookIcon{
+        margin-top: 20px;
+        height: 40px;
+        width:  40px;
+        background-color: $primary-color !important;
+        border: none;
+
+        .bookIcon{
+            font-size: 20px;
+            color:$font-light;
+        }
+    }
+
+    
+  }
+
+  .animationBTN{
+    transition: all .2s ease-in-out;
+}
+.animationBTN:hover{ transform: scale(1.3);}//hover bigger

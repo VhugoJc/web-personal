@@ -3,7 +3,7 @@ import {Avatar, Form, Select, Button, Row, Col, Input, notification} from 'antd'
 import {useDropzone} from 'react-dropzone';
 import  './EditUserForm.scss';
 import noAvatar from '../../../../assets/imagenes/png/no-avatar.png';
-import {UserOutlined, MailOutlined, LockOutlined} from '@ant-design/icons';
+import {UserOutlined, MailOutlined, LockOutlined,ThunderboltOutlined} from '@ant-design/icons';
 import { useEffect } from 'react';
 import { getAvatarApi, updateUserApi, uploadAvatarApi } from '../../../../api/user';
 import { getAccessToken} from '../../../../api/auth';
@@ -23,6 +23,8 @@ const  EditUserForm= ({user, setIsVisible, setReloadUsers}) => {
             lastName: user.lastName,
             email: user.email,
             role: user.role,
+            job:user.job,
+            description: user.description,
             avatar: user.avatar
         });
         // eslint-disable-next-line
@@ -46,6 +48,8 @@ const  EditUserForm= ({user, setIsVisible, setReloadUsers}) => {
             lastName: user.lastName,
             email: user.email,
             role: user.role,
+            job:user.job,
+            description:user.description,
             avatar: user.avatar
         });
         
@@ -69,6 +73,8 @@ const  EditUserForm= ({user, setIsVisible, setReloadUsers}) => {
             name: userData.name,
             lastName: userData.lastName,
             role: userData.role,
+            job:userData.job,
+            description: userData.description,
             avatar: userData.avatar
         }
 
@@ -117,6 +123,7 @@ const  EditUserForm= ({user, setIsVisible, setReloadUsers}) => {
             }
                     userUpdate.password=userData.password;
         }
+
 
         if(typeof userUpdate.avatar === "object"){
            
@@ -214,6 +221,7 @@ function EditForm({userData, setUserData, updateUser}){
 
     return (
         <Form className = "form-edit" onSubmit ={updateUser}>
+            
             <Row gutter={24}>
                 <Col span={12}>
                 <Form.Item>
@@ -232,6 +240,27 @@ function EditForm({userData, setUserData, updateUser}){
                             placeholder="Apellido"
                             value={userData.lastName}
                             onChange={e=>setUserData({...userData, lastName: e.target.value})}
+                        />
+                    </Form.Item>
+                </Col>
+            </Row>
+            <Row gutter={24}>
+            <Col span={12}>
+                    <Form.Item>
+                        <Input
+                            value={userData.job}
+                            onChange={e=>setUserData({...userData, job: e.target.value})}
+                            prefix={<ThunderboltOutlined/>}
+                            placeholder="puesto"
+                        />
+                    </Form.Item>
+                </Col>
+                <Col span={12}>
+                    <Form.Item>
+                        <Input.TextArea
+                            value={userData.description}
+                            onChange={e=>setUserData({...userData, description: e.target.value})}
+                            placeholder="Descripción"
                         />
                     </Form.Item>
                 </Col>

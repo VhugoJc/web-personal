@@ -1,0 +1,22 @@
+@import '../../../scss/index.scss';
+
+.calendar-btn{
+    text-align: right !important;
+
+    .btnContinue{
+        right: 0px !important;
+        background-color: $primary-color;
+        color: $font-light;
+    }
+    
+    .btnContinue:hover{
+        background-color: $primary-color-hover;
+        color: $font-light;
+    }
+    
+}
+
+.onlineBook-btn{
+    left: 15px;
+    width: 20%;
+}

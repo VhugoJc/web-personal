@@ -33,7 +33,7 @@ const MenuTop = () => {
             const resultado2=await getSocialMediaApi();
             const arrayMenuSM =[];
             resultado2.socialMediaMenu.forEach(itemSM=>{
-                if(itemSM.active){
+                if(itemSM.active && itemSM.contact===false){
                     arrayMenuSM.push(itemSM);
                 }
             });
@@ -48,7 +48,7 @@ const MenuTop = () => {
         <Menu className="menu-top-web" mode="horizontal">
             <Menu.Item className="menu-top-web__logo">
                 <Link to={"/"}>
-                <img src={Logo}/>
+                <img alt="" className="logo" src={Logo}/>
                 </Link>
             </Menu.Item>
             {menuData.map(item=>{
@@ -57,7 +57,7 @@ const MenuTop = () => {
                 if(external){
                     return(
                         <Menu.Item className="menu-item" key={item._id}>
-                            <a href={item.url} target="_blank" >{item.title}</a>
+                            <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
                          </Menu.Item>
                     );
                 }else{
@@ -77,10 +77,11 @@ const MenuTop = () => {
                                case "LinkedIn":iconSocialMedia=<LinkdIn className="li sm"/>;break;
                                case "Twitter":iconSocialMedia=<Twitter className="tw sm"/>;break;
                                case "Youtube":iconSocialMedia=<Youtube className="yt sm"/>;break;
-                           }
+                               default: break;
+                            }
                            return (
                                <Menu.Item key={item._id}>
-                                   <a href={item.url} target="_blank" >{iconSocialMedia}</a>
+                                   <a href={item.url} target="_blank" rel="noopener noreferrer">{iconSocialMedia}</a>
                                </Menu.Item>)
                        })
                    }

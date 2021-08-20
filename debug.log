@@ -7,3 +7,4 @@
 [0816/001413.666:ERROR:exception_snapshot_win.cc(98)] thread ID 12748 not found in process
 [0816/001413.666:ERROR:exception_snapshot_win.cc(98)] thread ID 9136 not found in process
 [0816/001413.666:ERROR:exception_snapshot_win.cc(98)] thread ID 11748 not found in process
+[0124/185513.204:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)

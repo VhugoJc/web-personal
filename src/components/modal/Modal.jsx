@@ -3,7 +3,7 @@ import {Modal as ModalAntDesign} from 'antd';
 
 
 const Modal = (props) => {
-    const {children, title, isVisible, setIsVisible} = props;
+    const {children, title, isVisible, setIsVisible, width} = props;
 
 
     return (  
@@ -13,6 +13,7 @@ const Modal = (props) => {
             visible={isVisible}
             onCancel={()=>setIsVisible(false)}
             footer ={false}
+            width= {width}
         >
             {children}
         </ModalAntDesign>

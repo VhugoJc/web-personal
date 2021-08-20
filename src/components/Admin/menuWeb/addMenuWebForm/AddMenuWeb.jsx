@@ -2,11 +2,10 @@ import React,{useState} from 'react';
 import {Button, Form, Input, Select, notification} from 'antd';
 import {FontSizeOutlined} from '@ant-design/icons';
 import './AddMenuWebForm.scss';
-import { addMenuApi } from '../../../../api/Menu';
-import { getAccessToken } from '../../../../api/auth';
-import { useEffect } from 'react';
 
-const AddMenuWeb = ({setReloadMenuWeb, setIsVisibleModal}) => {
+import { getAccessToken } from '../../../../api/auth';
+
+const AddMenuWeb = ({addMenuApi, setReloadMenuWeb, setIsVisibleModal, title}) => {
 
    
     const [newMenuWeb, setNewMenuWeb] = useState({
@@ -68,6 +67,7 @@ const AddMenuWeb = ({setReloadMenuWeb, setIsVisibleModal}) => {
     return (  
         <div className ="add-menu-web-form">
             <AddForm 
+                title={title}
                 newMenuWeb={newMenuWeb} 
                 setNewMenuWeb={setNewMenuWeb}
                 addMenu={addMenu}/>
@@ -75,7 +75,7 @@ const AddMenuWeb = ({setReloadMenuWeb, setIsVisibleModal}) => {
     );
 }
  
-function AddForm ({newMenuWeb,setNewMenuWeb,addMenu}){
+function AddForm ({newMenuWeb,setNewMenuWeb,addMenu, title}){
     const {Option} = Select;
    
    
@@ -112,7 +112,7 @@ function AddForm ({newMenuWeb,setNewMenuWeb,addMenu}){
         </Form.Item>
         <Form.Item>
             <Button type="primary" htmlType="submit" className="btn-submit" onClick={addMenu}>
-                Crear Menú
+                Crear {title}
             </Button>
         </Form.Item>
         

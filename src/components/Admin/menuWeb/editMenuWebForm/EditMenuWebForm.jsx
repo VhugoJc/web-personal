@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {updateMenuApi} from '../../../../api/Menu';
+// eslint-disable-next-line
 import { getAccessToken } from '../../../../api/auth';
 import {FontSizeOutlined,LinkOutlined} from '@ant-design/icons';
 import {Button, Form, Input, notification} from 'antd';
 import './EditMenuWebForm.scss';
-const EditMenuWebForm = ({item, setReloadMenuWeb, setIsVisibleModal}) => {
+const EditMenuWebForm = ({item, setReloadMenuWeb, setIsVisibleModal, title, updateMenuApi}) => {
    
     const [newMenuWeb, setNewMenuWeb] = useState({});
     
@@ -33,7 +33,7 @@ const EditMenuWebForm = ({item, setReloadMenuWeb, setIsVisibleModal}) => {
         const token = await getAccessToken();
         const result = await updateMenuApi(token,newMenuWeb,item._id);
         
-        if(result.saved){//     <-- si se actualizó, el backend manda una propiedad de saved=true
+        if(result){//     <-- si se actualizó, el backend manda una propiedad de saved=true
             setReloadMenuWeb(true);
             setIsVisibleModal(false);
             return notification["success"]({
@@ -51,6 +51,7 @@ const EditMenuWebForm = ({item, setReloadMenuWeb, setIsVisibleModal}) => {
     return (  
         <div className="edit-menu-form">
             <EditForm
+                title={title}
                 newMenuWeb={newMenuWeb}
                 setNewMenuWeb={setNewMenuWeb}
                 updateMenu={updateMenu}
@@ -59,7 +60,7 @@ const EditMenuWebForm = ({item, setReloadMenuWeb, setIsVisibleModal}) => {
     );
 }
 
-function EditForm({newMenuWeb,setNewMenuWeb,updateMenu}){
+function EditForm({newMenuWeb,setNewMenuWeb,updateMenu, title}){
     
     return(
         <Form>
@@ -86,7 +87,7 @@ function EditForm({newMenuWeb,setNewMenuWeb,updateMenu}){
                 htmlType="submit" 
                 className="btn-submit"
                 onClick={updateMenu}>
-                Actualizar Menú
+                Actualizar {title}
             </Button>
         </Form.Item>
         </Form>

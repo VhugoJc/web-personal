@@ -1,46 +1,34 @@
 import React, { Fragment } from 'react';
 import 'antd/dist/antd.css';
-import {Route, Switch} from 'react-router-dom';
-import {Layout, Row,Col} from 'antd';
-import MenuTop from '../components/Web/menuTop/MenuTop';
-import MenuTopMobile from '../components/Web/menuTop/MenuTopMobile';
-import './LayoutBasic.scss';
+import {Route, Switch} from 'react-router-dom';//Route System
+
+import MenuTop from '../components/Web/menuTop/MenuTop';//Desktop Menu Bar
+import MenuTopMobile from '../components/Web/menuTop/MenuTopMobile';//Mobile Menu Bar
+import './LayoutBasic.scss';//styles
+
+import Footer from '../components/Web/Footer';//Footer
 
 
+import FloatingButtons from '../components/Web/FloatingButtons';//Floating buttons
 
 const LayoutBasic = (props) => {
   //Sacar rutas de los props
   const {routes} = props;
-  const { Content, Footer} = Layout;//Ant design
-
+  
   const w = window.innerWidth;
 
   return(
     <Fragment>
-      
-     {w<1024
-     ? <MenuTopMobile/>
-     :<MenuTop/>}
-        
-
-
+      {w<1024
+        ? <MenuTopMobile/>
+        :<MenuTop/>
+      }
+      <FloatingButtons/>
       <LoadRouters routes = {routes}/> 
-      <Footer>Victor Hugo Jimenez</Footer>
+      <Footer/>
     </Fragment>
   );
 
-  /*return (  
-      <Layout>
-          <h2>Menu Basic</h2>
-          <Layout>
-             
-              <Content>
-                 <LoadRouters routes = {routes}/> 
-              </Content>
-              <Footer>Victor Hugo Jimenez</Footer>
-          </Layout>
-       </Layout>
-  );*/
 }
 
 function LoadRouters({routes}){

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {updateMenuApi} from '../../../../api/Menu';
 import { getAccessToken } from '../../../../api/auth';
 import {FontSizeOutlined,LinkOutlined} from '@ant-design/icons';
 import {Button, Form, Input, notification} from 'antd';
